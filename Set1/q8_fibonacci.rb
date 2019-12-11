@@ -1,0 +1,31 @@
+
+puts "Enter q to terminate the program"
+
+v = 'c'
+
+while (1==1)
+
+	puts "Enter a number"	
+
+	p=1
+	
+	v = gets.chomp
+	
+	if v.eql?("q")
+		break
+	end	
+	
+	num = v.to_i
+
+	i1=0
+	i2=1
+
+	for i in 1..num do
+
+		puts "#{i2}"
+		temp=i2
+		i2=i1+i2
+		i1=temp
+		
+	end
+end
