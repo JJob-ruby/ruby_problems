@@ -1,9 +1,9 @@
 
 
 a = ['cat', 2, 'dog', 'tiger', 4, 9, 'lion', 10]
+b = Array.new(a.length)
 
-
-puts "\nIntegers"
+puts "\n1) Integer elements"
 for ele in a
 	
 	if  ele.is_a? Integer
@@ -11,11 +11,7 @@ for ele in a
 	end
 end
 
-puts "\nReversed Array"
-
-print "#{a.reverse()}"
-
-puts "\nIndex of String Elements"
+puts "\n\n2) Index of String Elements"
 
 for i in 0..a.length-1 
 	
@@ -25,24 +21,12 @@ for i in 0..a.length-1
 end
 
 
-puts "\nIndex of String Elements"
+puts "\n\n3) Count of elements in the array"
 
-for i in 0..a.length-1 
-	
-	if  a[i].is_a? String
-		print i.to_s + " "
-	end
-end
-
-puts "\n Sum of array elements pushed into the array"
-
-sum = 0
-a.each { |a| sum+=a }
-a.push(sum)
+print a.length
 
 
-
-puts "\nCheck for leopard"
+puts "\n\n4) Check for the string 'leopard'"
 
 if a.include?('leopard')
 	puts "Present"
@@ -51,11 +35,57 @@ else
 end
 
 
-puts "\nCount of elements in the array"
+puts "\n5) Strings that have vowels"
 
-print a.length
+for i in 0..a.length-1 
+	
+	if  a[i].is_a? String
+		if (a[i] =~ /[aeiou]/)==1
+			print a[i].to_s+" "
+		end
+	end
+end
 
-puts "\nCheck if first and last are the same"
+
+puts "\n\n6) Sum of the array elements pushed into the array"
+
+sum = 0
+a.each do |i|
+	if  i.is_a? Integer
+		sum += i
+	end
+end
+
+puts "Sum of arrray elements is #{sum}"
+a.push(sum)
+puts "Array after pushing the sum value is #{a}"
+
+puts "\n7) Last 3 elements of the array"
+
+l=a.length
+if l < 3
+	puts "Array too small"
+else
+	puts " #{a[l-1]}"+" #{a[l-2]}"+" #{a[l-3]}"
+end
+
+puts "\n8) Replace vowels with the '$' sign"
+
+for i in 0..a.length-1 
+	
+	if  a[i].is_a? String
+		if (a[i] =~ /[aeiou]/)==1
+			b[i]=a[i].tr('aeiouAEIOU', '$')
+
+		end
+	end
+end
+
+puts "#{b}"
+
+
+
+puts "\n9) Check if first and last are the same"
 
 if a[0]==a[a.length-1]
 	puts "Same"
@@ -63,7 +93,15 @@ else
 	puts "Different"
 end
 
-puts "\nDelete Element at index 2"
+
+puts "\n10) Reversed Array"
+
+puts "#{a.reverse()}"
+
+
+
+
+puts "\n11) Delete Element at index 2"
 
 puts "Array: #{a}"
 a.delete_at(2)
