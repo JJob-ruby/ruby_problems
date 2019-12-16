@@ -1,0 +1,13 @@
+
+1)Create a class BookStore. When you initialize a new instance or object of the class, allow the user to define some instance variables that tell us the book name, author, year of publishing. 
+
+2)Create an instance variable that is set to 0 during instantiation of the object to track the current stock of book. 
+
+3)Create instance methods that allows to increase the stock value, decrease the stock value and to display the current stock
+
+4)Add an accessor method to your BookStore class to change and view the year of publishing. Then add an accessor method that allows you to view, but not modify, the author of the book.
+
+5)Create a method called change_name that can be called on an object and will modify the name of the book.
+
+6)Add a class method to your BookStore class that calculates the total price of any book(with total stock and price).
+
