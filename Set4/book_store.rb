@@ -7,6 +7,13 @@ class BookStore
 	@y_o_p
 	@stock
 	@price
+	
+	attr_accessor :y_o_p
+
+	attr_reader :bookname
+	attr_reader :author
+	attr_reader :price
+	attr_reader :stock
 
 	def initialize(n,a,y_o_p,p)
 		@bookname=n
@@ -17,10 +24,14 @@ class BookStore
 	end
 
 
-	def stockmodify ( i )
+	def stock_increase ( i )
 		@stock = @stock + i
 	end
 
+	def stock_decrease ( i )
+		@stock = @stock - i
+	end		
+	
 	def stockdisplay
 		
 		puts "'#{@bookname}' by '#{@author}' :: Number in Stock: '#{@stock}' "
@@ -39,8 +50,8 @@ class BookStore
 		puts "Author of #{@bookname} is #{@author}"
 	end
 		
-	def totalvalue
-		puts "#{@bookname} : Total value of Stock = #{@stock*@price}"
+	def self.totalvalue(ob)
+		puts "#{ob.bookname} : Total value of Stock = #{ob.stock*ob.price}"
 	end
 
 	def viewobject
@@ -52,8 +63,10 @@ end
 b = BookStore.new("Star Wars", "Edwin", "19/4/4000", 60)
 
 print "#{b.stockdisplay}"
-b.totalvalue
+#b.totalvalue
 b.change_name("Darth Magger")
+b.stock_increase(5)
+b.stock_decrease(2)
 b.viewobject
 b.change_yop("3/4/2222")
-b.totalvalue
+BookStore.totalvalue(b)
