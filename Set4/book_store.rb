@@ -23,7 +23,6 @@ class BookStore
 		@price=p
 	end
 
-
 	def stock_increase ( i )
 		@stock = @stock + i
 	end
@@ -69,4 +68,5 @@ b.stock_increase(5)
 b.stock_decrease(2)
 b.viewobject
 b.change_yop("3/4/2222")
+b.y_o_p = "3/4/1993" 
 BookStore.totalvalue(b)

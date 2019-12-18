@@ -1,0 +1,37 @@
+Find a match pattern for matching the following:
+
+1) 
+
+Matches 3, 4, or 5 digits.
+Match “hello” in “hellogirlhelloboy”
+Match “hello123” in “hello123four”
+Match “hello” in “HelloGoodMorning”
+
+2)
+
+Find a match pattern for matching the following:
+An email address (eg: demo@rubyians.com)
+A zip code (eg: 123456)
+A phone number (eg: +919900990099)
+A website (eg: http://www.rubysoftware.tech/)
+
+3)
+
+Find the position of first and last letters (and the letters too) of the matched string
+String: ‘This is a simple string.’
+Input: ‘simple’
+	Output reqd:
+	First letter: s at position: 10
+	Last letter: e at position: 15
+
+4) 
+
+Create a PreProcessor class that processes an input text to achieve the following:
+Converts all phone numbers to XXXX-XXX-XXX
+Converts all email addresses to demo@example.com
+Converts all website to www.example.com
+Finds the number of lines
+Finds the number of occurrences of words: ‘is’, ‘the’, ‘and’. (case insensitive) 
+
+
+
